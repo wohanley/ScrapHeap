@@ -4,16 +4,16 @@ import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-import com.wohanley.ScrapHeap.main.ScrapHeapModel;
+import com.wohanley.ScrapHeap.main.dao.ScrapRepository;
 
 public class MainWindow extends JFrame
 {
-    private ScrapHeapModel model;
+    private ScrapRepository repo;
     
-    public MainWindow(ScrapHeapModel model)
+    public MainWindow(ScrapRepository repo)
     {
         super();
-        this.model = model;
+        this.repo = repo;
         
         this.setPreferredSize(new Dimension(300, 300));
         this.setVisible(true);

@@ -1,9 +1,9 @@
-package com.wohanley.ScrapHeap.main;
+package com.wohanley.ScrapHeap.main.dao;
 
 import com.wohanley.ScrapHeap.main.relationships.Relationship;
 import com.wohanley.ScrapHeap.main.scraps.Scrap;
 
-public interface ScrapHeapModel
+public interface ScrapRepository
 {
     void addScrap(Scrap scrap);
     
