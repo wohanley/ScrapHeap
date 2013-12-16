@@ -10,10 +10,11 @@ import com.wohanley.ScrapHeap.main.scraps.Scrap;
 public class Neo4jRepository implements ScrapRepository
 {
     private GraphDatabaseService db;
+    private final String dbPath = "db"; // TODO some kind of settings junk
     
     public Neo4jRepository()
     {
-        db = new GraphDatabaseFactory().newEmbeddedDatabase("db");
+        db = new GraphDatabaseFactory().newEmbeddedDatabase(dbPath);
         
         // Registers a shutdown hook for the Neo4j instance so that it
         // shuts down nicely when the VM exits (even if you "Ctrl-C" the
