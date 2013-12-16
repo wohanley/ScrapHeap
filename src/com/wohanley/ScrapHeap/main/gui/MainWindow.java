@@ -1,10 +1,10 @@
-package com.wohanley.ScrapHeap.gui;
+package com.wohanley.ScrapHeap.main.gui;
 
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
 
-import com.wohanley.ScrapHeap.ScrapHeapModel;
+import com.wohanley.ScrapHeap.main.ScrapHeapModel;
 
 public class MainWindow extends JFrame
 {
