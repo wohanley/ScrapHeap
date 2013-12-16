@@ -16,17 +16,7 @@ public class Neo4jRepository implements ScrapRepository
     {
         db = new GraphDatabaseFactory().newEmbeddedDatabase(dbPath);
         
-        // Registers a shutdown hook for the Neo4j instance so that it
-        // shuts down nicely when the VM exits (even if you "Ctrl-C" the
-        // running application).
-        Runtime.getRuntime().addShutdownHook(new Thread()
-        {
-            @Override
-            public void run()
-            {
-                db.shutdown();
-            }
-        });
+        Runtime.getRuntime().addShutdownHook(new Neo4jShutdownHook(db));
     }
     
     @Override
