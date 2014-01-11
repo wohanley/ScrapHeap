@@ -3,8 +3,6 @@ package com.wohanley.ScrapHeap.main.document;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.Element;
 
-import com.wohanley.ScrapHeap.main.dao.neo4j.Neo4jBackedClause;
-
 public class ScrapDocument extends AbstractDocument
 {
     protected ScrapDocument(Content data)

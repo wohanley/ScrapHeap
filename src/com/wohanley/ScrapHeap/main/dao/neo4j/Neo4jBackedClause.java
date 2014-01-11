@@ -13,15 +13,29 @@ public class Neo4jBackedClause implements Clause
     
     private String text;
     
-    @RelatedTo(type = "NEXT", direction = Direction.OUTGOING)
-    private Clause next;
-    
-    @RelatedTo(type = "NEXT", direction = Direction.INCOMING)
-    private Clause previous;
-    
     @Override
     public String getText()
     {
         return text;
+    }
+    
+    @RelatedTo(type = "NEXT", direction = Direction.OUTGOING)
+    private Clause next;
+
+    @Override
+    public Clause next()
+    {
+        // TODO
+        return next;
+    }
+
+    @RelatedTo(type = "NEXT", direction = Direction.INCOMING)
+    private Clause previous;
+    
+    @Override
+    public Clause previous()
+    {
+        // TODO
+        return previous;
     }
 }
