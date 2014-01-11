@@ -77,12 +77,20 @@ public class ScrapContent implements Content
     @Override
     public String getString(int offset, int length) throws BadLocationException
     {
-        // TODO
-        return null;
+        StringBuilder found = new StringBuilder(length);
+        
+        
     }
 
     @Override
     public UndoableEdit insertString(int offset, String insert) throws BadLocationException
+    {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public UndoableEdit remove(int offset, int length) throws BadLocationException
     {
         // TODO Auto-generated method stub
         return null;
@@ -104,12 +112,5 @@ public class ScrapContent implements Content
         }
         
         return length;
-    }
-
-    @Override
-    public UndoableEdit remove(int offset, int length) throws BadLocationException
-    {
-        // TODO Auto-generated method stub
-        return null;
     }
 }
