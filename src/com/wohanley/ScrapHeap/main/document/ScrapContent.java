@@ -67,21 +67,22 @@ public class ScrapContent implements Content
     }
 
     @Override
-    public void getChars(int arg0, int arg1, Segment arg2) throws BadLocationException
+    public void getChars(int offset, int length, Segment out) throws BadLocationException
     {
-        // TODO Auto-generated method stub
-        
+        // I'm not 100% on this - Segment's Javadoc says to treat it as immutable,
+        // but this method is meant to copy new content into one?
+        out.array = getString(offset, length).toCharArray();
     }
 
     @Override
-    public String getString(int arg0, int arg1) throws BadLocationException
+    public String getString(int offset, int length) throws BadLocationException
     {
-        // TODO Auto-generated method stub
+        // TODO
         return null;
     }
 
     @Override
-    public UndoableEdit insertString(int arg0, String arg1) throws BadLocationException
+    public UndoableEdit insertString(int offset, String insert) throws BadLocationException
     {
         // TODO Auto-generated method stub
         return null;
@@ -106,7 +107,7 @@ public class ScrapContent implements Content
     }
 
     @Override
-    public UndoableEdit remove(int arg0, int arg1) throws BadLocationException
+    public UndoableEdit remove(int offset, int length) throws BadLocationException
     {
         // TODO Auto-generated method stub
         return null;

@@ -17,9 +17,13 @@ import org.junit.runner.RunWith;
 import com.wohanley.ScrapHeap.main.document.ScrapContent;
 import com.wohanley.ScrapHeap.main.scraps.Clause;
 
-@RunWith(JMockit.class)
 public class ScrapContentTest
-{   
+{
+    public void (@Mocked final Clause)
+    {
+        
+    }
+    
     @Test
     public void lengthCountsCharactersInClauses(@Mocked final Clause clause1,
         @Mocked final Clause clause2)
