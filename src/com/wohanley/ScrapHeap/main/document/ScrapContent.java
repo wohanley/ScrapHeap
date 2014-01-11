@@ -28,7 +28,7 @@ public class ScrapContent implements Content
     public Position createPosition(final int offset) throws BadLocationException
     {
         ScrapContentPosition position = new ScrapContentPosition(offset);
-        observers.add(position);
+        observers.add(position); // TODO: use weak references?
         return position;
     }
     
